@@ -1,4 +1,4 @@
-package com.autowebkit.filecheck.filters;
+package com.autowebkit.filecleaner.filters;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package com.autowebkit.filecheck.ui;
+package com.autowebkit.filecleaner.ui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

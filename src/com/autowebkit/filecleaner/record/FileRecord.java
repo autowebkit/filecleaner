@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.autowebkit.filecheck.record;
+package com.autowebkit.filecleaner.record;
 
-import com.autowebkit.filecheck.listener.IChangedListener;
+import com.autowebkit.filecleaner.listener.IChangedListener;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

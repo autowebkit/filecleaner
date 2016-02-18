@@ -1,8 +1,8 @@
-package com.autowebkit.filecheck.record;
+package com.autowebkit.filecleaner.record;
 
-import com.autowebkit.filecheck.listener.DuplicatedListChangedListener;
-import com.autowebkit.filecheck.listener.IChangedListener;
-import com.autowebkit.filecheck.util.RecordUtil;
+import com.autowebkit.filecleaner.listener.DuplicatedListChangedListener;
+import com.autowebkit.filecleaner.listener.IChangedListener;
+import com.autowebkit.filecleaner.util.RecordUtil;
 
 import java.io.Serializable;
 import java.util.ArrayList;

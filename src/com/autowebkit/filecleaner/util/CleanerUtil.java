@@ -1,4 +1,4 @@
-package com.autowebkit.filecheck.util;
+package com.autowebkit.filecleaner.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Random;
 
-import com.autowebkit.filecheck.record.FileRecord;
+import com.autowebkit.filecleaner.record.FileRecord;
 import org.apache.commons.io.FileExistsException;
 import org.apache.commons.io.FileUtils;
 

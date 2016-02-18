@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.autowebkit.filecheck.util;
+package com.autowebkit.filecleaner.util;
 
 /**
  * Created by hui on 2/13/16.

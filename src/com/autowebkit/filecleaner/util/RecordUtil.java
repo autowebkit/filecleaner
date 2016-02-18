@@ -1,4 +1,4 @@
-package com.autowebkit.filecheck.util;
+package com.autowebkit.filecleaner.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,9 +14,9 @@ import java.util.List;
 import java.util.Stack;
 import java.util.zip.Adler32;
 
-import com.autowebkit.filecheck.filters.RecordFilter;
-import com.autowebkit.filecheck.record.FileRecord;
-import com.autowebkit.filecheck.record.RecordIndex;
+import com.autowebkit.filecleaner.filters.RecordFilter;
+import com.autowebkit.filecleaner.record.FileRecord;
+import com.autowebkit.filecleaner.record.RecordIndex;
 import org.apache.commons.io.FileUtils;
 
 /**

@@ -1,7 +1,7 @@
-package com.autowebkit.filecheck.listener;
+package com.autowebkit.filecleaner.listener;
 
-import com.autowebkit.filecheck.record.FileRecord;
-import com.autowebkit.filecheck.record.RecordIndex;
+import com.autowebkit.filecleaner.record.FileRecord;
+import com.autowebkit.filecleaner.record.RecordIndex;
 
 /**
  * Created by hui on 2/13/16.

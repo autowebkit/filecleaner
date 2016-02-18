@@ -1,4 +1,4 @@
-package com.autowebkit.filecheck;
+package com.autowebkit.filecleaner;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import com.autowebkit.filecheck.filters.AudioFileFilter;
-import com.autowebkit.filecheck.filters.ImageFileFilter;
-import com.autowebkit.filecheck.filters.RecordFilter;
-import com.autowebkit.filecheck.filters.VedioFileFilter;
-import com.autowebkit.filecheck.record.FileRecord;
-import com.autowebkit.filecheck.util.CleanerUtil;
-import com.autowebkit.filecheck.util.Logger;
-import com.autowebkit.filecheck.util.RecordUtil;
+import com.autowebkit.filecleaner.filters.AudioFileFilter;
+import com.autowebkit.filecleaner.filters.ImageFileFilter;
+import com.autowebkit.filecleaner.filters.RecordFilter;
+import com.autowebkit.filecleaner.filters.VedioFileFilter;
+import com.autowebkit.filecleaner.record.FileRecord;
+import com.autowebkit.filecleaner.util.CleanerUtil;
+import com.autowebkit.filecleaner.util.Logger;
+import com.autowebkit.filecleaner.util.RecordUtil;
 
 /**
  * Created by hui on 2/13/16.

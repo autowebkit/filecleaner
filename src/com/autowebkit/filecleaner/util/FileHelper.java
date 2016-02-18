@@ -1,8 +1,8 @@
-package com.autowebkit.filecheck.util;
+package com.autowebkit.filecleaner.util;
 
-import com.autowebkit.filecheck.filters.DirectoryFileFilter;
-import com.autowebkit.filecheck.filters.ImageFileFilter;
-import com.autowebkit.filecheck.filters.RecordFilter;
+import com.autowebkit.filecleaner.filters.DirectoryFileFilter;
+import com.autowebkit.filecleaner.filters.ImageFileFilter;
+import com.autowebkit.filecleaner.filters.RecordFilter;
 
 import java.io.File;
 import java.io.FileFilter;
