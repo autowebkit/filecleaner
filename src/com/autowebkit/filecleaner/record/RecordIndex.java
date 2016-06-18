@@ -19,7 +19,9 @@ public class RecordIndex implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -595155517676700810L;
-
+	/**
+	 * direct files record info will be maintained in the map
+	 */
 	HashMap<Long, FileRecord> directMap = new HashMap<Long, FileRecord>();
 
 	private long totalItemSize = 0 ;
@@ -81,7 +83,7 @@ public class RecordIndex implements Serializable{
 	
 	private void removeDuplicatedListChangedListener(FileRecord r) {
 		if(r!=null){
-			IChangedListener[] listeners = r.getLisnters();
+			IChangedListener[] listeners = r.getListeners();
 			List<IChangedListener> list = new ArrayList<IChangedListener>();
 			for(IChangedListener l : listeners){
 				if(l instanceof DuplicatedListChangedListener){

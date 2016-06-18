@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Stack;
 import java.util.zip.Adler32;
 
-import com.autowebkit.filecleaner.filters.RecordFilter;
+import com.autowebkit.filecleaner.filters.FileTypeFilter;
 import com.autowebkit.filecleaner.record.FileRecord;
 import com.autowebkit.filecleaner.record.RecordIndex;
 import org.apache.commons.io.FileUtils;
@@ -39,7 +39,7 @@ public class RecordUtil {
 	 * @param filter filter
 	 * @return RecordIndex object or null if errors. 
 	 */
-	public static HashMap<Long, FileRecord> getRecordMap(File rootFolder, RecordFilter filter){
+	public static HashMap<Long, FileRecord> getRecordMap(File rootFolder, FileTypeFilter filter){
 		return getRecordMap(rootFolder, filter, false);
 	}
 	/**
@@ -55,7 +55,7 @@ public class RecordUtil {
 	 * @param forceBuild where force to rebuild the FileRecord map 
 	 * @return RecordIndex object or null if errors. 
 	 */
-	public static HashMap<Long, FileRecord> getRecordMap(File rootFolder, RecordFilter filter, boolean forceBuild){
+	public static HashMap<Long, FileRecord> getRecordMap(File rootFolder, FileTypeFilter filter, boolean forceBuild){
 		if(forceBuild == false){
 			return updateRecordIndex(rootFolder,filter);
 		}else{
@@ -71,7 +71,7 @@ public class RecordUtil {
 	 * 
 	 * @return true record index has been updated; false not updated  
 	 */
-	private static HashMap<Long, FileRecord> updateRecordIndex(File rootFolder, RecordFilter filter){
+	private static HashMap<Long, FileRecord> updateRecordIndex(File rootFolder, FileTypeFilter filter){
 		if(rootFolder == null || !rootFolder.isDirectory()){
 			Logger.log("Target folder is null");
 			return null;
@@ -156,7 +156,7 @@ public class RecordUtil {
 	 * @param rootFolder
 	 * @param filter 
 	 */
-	private static HashMap<Long,FileRecord> buildRecordIndexFile(File rootFolder, RecordFilter filter){
+	private static HashMap<Long,FileRecord> buildRecordIndexFile(File rootFolder, FileTypeFilter filter){
 		if(rootFolder == null || !rootFolder.isDirectory()){
 			Logger.log("Target folder is null");
 			return null ;
@@ -205,7 +205,7 @@ public class RecordUtil {
 	 * @param filter
 	 * @return true the record index has been updated
 	 */
-	private static boolean updateSingleLevelRecordIndex(RecordIndex ri, File rootFolder, RecordFilter filter) {
+	private static boolean updateSingleLevelRecordIndex(RecordIndex ri, File rootFolder, FileTypeFilter filter) {
 		boolean updated = false ;
 		if (rootFolder.isDirectory()) {
 			List<File> files = fileHelper.getFilesByFilter(rootFolder, filter);
@@ -332,7 +332,7 @@ public class RecordUtil {
 	 * @param filter
 	 * @return recordIndex object 
 	 */
-	private static RecordIndex buildSingleLevelRecordIndex(File rootFolder, RecordFilter filter) {
+	private static RecordIndex buildSingleLevelRecordIndex(File rootFolder, FileTypeFilter filter) {
 		RecordIndex recordIndex = new RecordIndex();
 
 		long start = System.currentTimeMillis() ;

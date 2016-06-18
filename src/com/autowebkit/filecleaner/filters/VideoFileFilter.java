@@ -7,11 +7,11 @@ import java.util.List;
 /**
  * Created by hui on 2/13/16.
  */
-public class VedioFileFilter extends RecordFilter{
-	private String TAG = "vedio";
+public class VideoFileFilter extends FileTypeFilter {
+	private String TAG = "video";
 	public List<String> suffixs = new ArrayList<String>();
 	
-	public VedioFileFilter() {
+	public VideoFileFilter() {
 		super();
 		buildList();
 	}

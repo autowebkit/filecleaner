@@ -9,8 +9,8 @@ import java.util.List;
 
 import com.autowebkit.filecleaner.filters.AudioFileFilter;
 import com.autowebkit.filecleaner.filters.ImageFileFilter;
-import com.autowebkit.filecleaner.filters.RecordFilter;
-import com.autowebkit.filecleaner.filters.VedioFileFilter;
+import com.autowebkit.filecleaner.filters.FileTypeFilter;
+import com.autowebkit.filecleaner.filters.VideoFileFilter;
 import com.autowebkit.filecleaner.record.FileRecord;
 import com.autowebkit.filecleaner.util.CleanerUtil;
 import com.autowebkit.filecleaner.util.Logger;
@@ -27,12 +27,12 @@ public class Cleaner {
 	
 	private static final String duplicatedpath = "E:\\duplicated";
 	
-	private List<RecordFilter> filters = new ArrayList<RecordFilter>();
+	private List<FileTypeFilter> filters = new ArrayList<FileTypeFilter>();
 	
 	private void init(){
 		ImageFileFilter imageFilter = new ImageFileFilter();
 		AudioFileFilter audioFilter = new AudioFileFilter();
-		VedioFileFilter vedioFilter = new VedioFileFilter();
+		VideoFileFilter vedioFilter = new VideoFileFilter();
 		
 		filters.add(imageFilter);
 		filters.add(audioFilter);
@@ -55,7 +55,7 @@ public class Cleaner {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		for (RecordFilter filter : cleaner.filters) {			
+		for (FileTypeFilter filter : cleaner.filters) {
 			long s1 = System.currentTimeMillis() ;
 			
 			HashMap<Long, FileRecord> tgtmap = cleaner.getRecordMap(tgtFolder, filter);
@@ -85,7 +85,7 @@ public class Cleaner {
 		Logger.log(sb.toString());
 		
 		// start test		
-		for (RecordFilter filter : cleaner.filters) {			
+		for (FileTypeFilter filter : cleaner.filters) {
 			HashMap<Long, FileRecord> tgtmap = cleaner.getRecordMap(tgtFolder, filter);	
 			HashMap<Long, FileRecord> dupmap = cleaner.getRecordMap(dupFolder, filter);
 			HashMap<Long, FileRecord> newmap = new HashMap<Long, FileRecord>();
@@ -110,7 +110,7 @@ public class Cleaner {
 		// end test
 	}
 
-	private HashMap<Long, FileRecord> getRecordMap(File folder, RecordFilter filter) {
+	private HashMap<Long, FileRecord> getRecordMap(File folder, FileTypeFilter filter) {
 		// build target folder map info
 		long start = System.currentTimeMillis();
 		HashMap<Long, FileRecord> map = RecordUtil.getRecordMap(folder, filter);

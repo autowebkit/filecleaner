@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by hui on 2/13/16.
  */
-public class AudioFileFilter extends RecordFilter{
+public class AudioFileFilter extends FileTypeFilter {
 	
 	private String TAG = "audio";
 	

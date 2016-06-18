@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by hui on 2/13/16.
  */
-public class ImageFileFilter extends RecordFilter{
+public class ImageFileFilter extends FileTypeFilter {
 	private String TAG = "image";
 	public List<String> suffixs = new ArrayList<String>();
 	

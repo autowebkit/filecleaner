@@ -5,7 +5,7 @@ import java.io.FileFilter;
 /**
  * Created by hui on 2/13/16.
  */
-public abstract class RecordFilter implements FileFilter{
+public abstract class FileTypeFilter implements FileFilter{
 	/**
 	 * filter tag 
 	 * @return

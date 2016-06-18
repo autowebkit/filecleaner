@@ -2,7 +2,7 @@ package com.autowebkit.filecleaner.util;
 
 import com.autowebkit.filecleaner.filters.DirectoryFileFilter;
 import com.autowebkit.filecleaner.filters.ImageFileFilter;
-import com.autowebkit.filecleaner.filters.RecordFilter;
+import com.autowebkit.filecleaner.filters.FileTypeFilter;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -54,7 +54,7 @@ public class FileHelper {
 	 * @param filter
 	 * @return
 	 */
-	public List<File> getFilesByFilter(File folder, RecordFilter filter) {
+	public List<File> getFilesByFilter(File folder, FileTypeFilter filter) {
 		List<File> files = new ArrayList<File>();
 		if (folder != null && folder.isDirectory()) {
 			FileFilter ff = (FileFilter) filter ;

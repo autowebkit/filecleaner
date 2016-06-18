@@ -73,13 +73,14 @@ public class FileRecord implements Serializable{
 		}
 	}
 	
-	public IChangedListener[] getLisnters(){
+	public IChangedListener[] getListeners(){
 		return (IChangedListener[])listeners.toArray();
 	}
 	
 	public long getLastModified() {
 		return lastModified;
 	}
+
 	public void setLastModified(long lastModified) {
 		this.lastModified = lastModified;
 	}
@@ -166,6 +167,7 @@ public class FileRecord implements Serializable{
 		}
 		return size ;
 	}
+
 	public void addDuplicateRecord(FileRecord record) {
 		if(record!=null){
 			if(record.duplicateList!=null && record.duplicateList.size()>0){				
